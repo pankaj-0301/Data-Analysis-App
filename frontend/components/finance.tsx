@@ -2,7 +2,18 @@
 
 import { FinancialOverview } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell
+} from "recharts";
 
 interface FinanceProps {
   data: FinancialOverview;
@@ -70,7 +81,7 @@ export default function Finance({ data }: FinanceProps) {
                   dataKey="share"
                 >
                   {data.market_share.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell key={`cell-${index.toString()}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip />

@@ -56,7 +56,7 @@ export default function DashboardPage() {
       setSupplyChain(supplyData);
       setHrAnalytics(hrData);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred while fetching data');
+setError((err as Error).message || 'An error occurred while fetching data');
     } finally {
       setLoading(false);
     }

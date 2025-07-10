@@ -7,7 +7,7 @@ import {
   HRAnalytics 
 } from './data';
 
-const API_BASE_URL = '';
+const API_BASE_URL = 'https://data-analysis-app-8szn.onrender.com';
 
 class ApiClient {
   private async fetchData<T>(endpoint: string): Promise<T> {

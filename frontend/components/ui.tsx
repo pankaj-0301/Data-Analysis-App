@@ -119,3 +119,15 @@ export function TabsContent({ children, value, className = "" }: TabsContentProp
     </div>
   );
 }
+
+// Toast types for use-toast.ts
+export type ToastActionElement = React.ReactNode;
+
+export interface ToastProps {
+  id: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  action?: ToastActionElement;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
